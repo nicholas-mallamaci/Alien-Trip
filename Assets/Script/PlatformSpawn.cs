@@ -28,6 +28,5 @@ public class PlatformSpawn : MonoBehaviour
     {
         Instantiate(platform, transform.position + new Vector3(9 * Times, y, 0), transform.rotation);
         Times = Times + 1;
-        Destroy(platform, 5);
     }
 }
