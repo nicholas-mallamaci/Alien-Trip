@@ -15,7 +15,7 @@ public class FirePowerUp : MonoBehaviour
     {
         if(collison.tag == "Laser")
         { 
-            audioData.Play (); 
+            audioData.Play(); 
             laser.SetActive(true);
             Destroy(pickup);
             
