@@ -38,4 +38,5 @@ public class LifePoints : MonoBehaviour
     {
         healtAmount -= Damage;
     }
+
 }
