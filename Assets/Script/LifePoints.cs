@@ -8,6 +8,7 @@ public class LifePoints : MonoBehaviour
 
     public float healtAmount;
     public GameObject player;
+    public GameObject laser;
 
     public void Update()
     {
@@ -18,11 +19,18 @@ public class LifePoints : MonoBehaviour
         }
     }
     
-    private void OnTriggerEnter2D(Collider2D collison)
+    private void OnTriggerEnter2D(Collider2D coll)
     {
-        if(collison.tag == "Asteroid")
+        if(laser.activeSelf)
+        {
+            
+        }
+        else
+        {
+        if(coll.tag == "Asteroid")
         {
             TakeDamage(100);
+        }
         }
     }
 
