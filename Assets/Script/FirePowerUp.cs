@@ -15,8 +15,7 @@ public class FirePowerUp : MonoBehaviour
         if(collison.tag == "Laser")
         { 
             laser.SetActive(true);
-            Destroy(pickup);
-            
+            Destroy(collison.gameObject);  
         }
     }
 }

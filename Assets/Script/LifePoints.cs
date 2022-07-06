@@ -9,6 +9,7 @@ public class LifePoints : MonoBehaviour
     public float healtAmount;
     public GameObject player;
     public GameObject laser;
+    public GameObject mask;
 
     public void Update()
     {
@@ -21,7 +22,7 @@ public class LifePoints : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if(laser.activeSelf)
+        if(laser.activeSelf || mask.activeSelf)
         {
             
         }
