@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
 {
 
     public Text scoreText;
+    public Text finalScore;
     public float scoreAmount;
     public float score;
 
@@ -22,5 +23,11 @@ public class Score : MonoBehaviour
     {
         scoreText.text = (int)scoreAmount + "m";
         scoreAmount += score * Time.deltaTime;
+
+        if(GameObject.FindGameObjectWithTag("Player") == null)
+        {
+            finalScore.text = scoreText.text;
+            Destroy(scoreText);
+        }
     }
 }
