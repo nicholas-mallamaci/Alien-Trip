@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.21729857, g: 0.21963519, b: 0.25401372, a: 1}
+  m_IndirectSpecularColor: {r: 0.1400297, g: 0.14620805, b: 0.17198327, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1536,6 +1536,7 @@ GameObject:
   - component: {fileID: 749910693}
   - component: {fileID: 749910692}
   - component: {fileID: 749910697}
+  - component: {fileID: 749910696}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
@@ -1624,6 +1625,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &749910696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749910691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: f05a44fd9ff9538448ee808e3cf18ead, type: 2}
 --- !u!114 &749910697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3357,12 +3374,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[{"name":"isJumping","value":{"$content":false,"$type":"System.Boolean"},"$version":"A"},{"name":"RespawnButton","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"PausePanel","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"GamePanel","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Laser","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"collection":{"$content":[{"name":"isJumping","value":{"$content":false,"$type":"System.Boolean"},"$version":"A"},{"name":"RespawnButton","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"PausePanel","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"GamePanel","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Laser","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Mask","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 219306551}
     - {fileID: 1721366651}
     - {fileID: 422399130}
     - {fileID: 2117239920}
+    - {fileID: 1881569470}
 --- !u!50 &7938677391819035624
 Rigidbody2D:
   serializedVersion: 4
@@ -3450,8 +3468,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.34, y: 4.28}
-    newSize: {x: 5.34, y: 4.28}
+    oldSize: {x: 2.25, y: 4}
+    newSize: {x: 2.25, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -3521,7 +3539,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.34, y: 4.28}
+  m_Size: {x: 2.25, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
